@@ -215,4 +215,4 @@ bar {
 # Initial Configuration script
 # It is intended to help the user configure basic settings
 # Remove this line
-exec alacritty -e /usr/bin/python /usr/bin/InitConfig.py
+exec alacritty -e /usr/bin/InitConfig.sh
