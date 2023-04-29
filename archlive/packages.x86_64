@@ -120,6 +120,7 @@ sg3_utils
 smartmontools
 sof-firmware
 squashfs-tools
+starship
 sudo
 syslinux
 systemd-resolvconf
