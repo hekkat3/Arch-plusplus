@@ -10,7 +10,7 @@
 #
 
 # Super key as the modifier
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -211,3 +211,8 @@ bar {
 	position top
 	status_command i3status
 }
+
+# Initial Configuration script
+# It is intended to help the user configure basic settings
+# Remove this line
+exec alacritty -e /usr/bin/python /usr/bin/InitConfig.py

@@ -17,18 +17,12 @@ def key_layout():
 			os.system('localectl list-keymaps')
 		elif usr_kl == 'default': # do nothing, it's already the default
 			k_selected = True
-			print('Keyboard succesfully set')
 		else: # Try to set keyboard
-			try:
-				subprocess.run(['loadkeys', usr_kl], capture_output = True, check_output = True)
-				k_selected = True
-			# if error, key_layout again
-			except:
-				k_selected = False
-			if k_selected:
-				print('Keyboard succesfully set')
-			else:
-				print('Keyboard not set, try again')
+			cmd1 = "localectl set-keymap --no-convert " + usr_kl
+			cmd2 = "setxkbmap -layout " + usr_kl
+			os.system(cmd1)
+			os.system(cmd2)
+			k_selected = True
 
 def timezone():
 	# TIMEZONE SELECTION
@@ -57,18 +51,18 @@ def wifi():
 		return
 	# Ask if a connection is wanted
 	answered = False
-	while !answered:
+	while not answered:
 		answ = input("Do you want to connect through Wifi? (y/n)").lower()
-		if answ == 'y' || 'yes'
+		if answ == 'y' or 'yes':
 			answered = True
-		else answ == 'n' || 'no'
+		elif answ == 'n' or 'no':
 			want_to_connect = False
 			answered = True
-	if not want_to_connect
+	if not want_to_connect:
 		return
-	while !connected:
+	while not connected:
+		connected = True
 		# Display available connections
-		os.system('nmcli ')
 		# Try to connect
 		# Repeat (2.) if not connected
 
@@ -86,6 +80,9 @@ def last_print():
 	print("- If you want to use Ethernet just plug it in")
 	print("- If you want to use Wifi, use 'iwctl'. After entering the [iwd]# prompt, use 'help' to see all the information you need")
 	print("- If you want to use Mobile Network use 'mmcli. Use 'man mmcli to see all the information you need'")
+	print("")
+	print("One last thing:")
+	print("The i3 configuration file is '~/.config/i3/config', go to this file with 'vim ~/.config/i3/config' and remove the last line. Make any other change you want to do in the configuration file and read the shortcuts currently set")
 	input("Press any key to continue")
 
 if __name__ == "__main__":
