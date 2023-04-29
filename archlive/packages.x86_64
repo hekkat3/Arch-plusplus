@@ -4,6 +4,7 @@ amd-ucode
 arch-install-scripts
 archinstall
 b43-fwcutter
+bash
 bat
 base
 bind
@@ -45,6 +46,10 @@ grml-zsh-config
 grub
 hdparm
 hyperv
+i3-wm
+i3blocks
+i3lock
+i3status
 intel-ucode
 irssi
 iw
@@ -114,7 +119,6 @@ rsync
 rust
 rxvt-unicode-terminfo
 screen
-sddm
 sdparm
 sg3_utils
 smartmontools
