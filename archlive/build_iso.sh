@@ -5,7 +5,7 @@ if [ ! -d ../tmp_work/ ]; then
 else
 	echo "../tmp_work/ already exists"
 	echo "Erasing and creating ../tmp_work/"
-	rm -vrf ../tmp_work/
+	sudo rm -vrf ../tmp_work/
 	mkdir -v ../tmp_work/
 fi
 
