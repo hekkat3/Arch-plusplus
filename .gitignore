@@ -1,2 +1,3 @@
 # Ignores the folder where the ISO is built
 /archISO
+/tmp_work
