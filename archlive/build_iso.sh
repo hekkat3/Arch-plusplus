@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ ! -d /tmp/archiso ]; then
-	mkdir -v /tmp/archiso
+if [ ! -d ../tmp_work/ ]; then
+	mkdir -v ../tmp_work/
 else
-	echo "/tmp/archiso/ already exists"
-	echo "Erasing and creating /tmp/archiso/"
-	sudo rm -vrf /tmp/archiso
-	mkdir -v /tmp/archiso
+	echo "../tmp_work/ already exists"
+	echo "Erasing and creating ../tmp_work/"
+	rm -vrf ../tmp_work/
+	mkdir -v ../tmp_work/
 fi
 
 if [ ! -d ../archISO ]; then
@@ -19,4 +19,4 @@ else
 fi
 
 echo "** creating ISO **"
-sudo mkarchiso -v -w /tmp/archiso/ -o ../archISO/ .
+sudo mkarchiso -v -w ../tmp_work/ -o ../archISO/ .
