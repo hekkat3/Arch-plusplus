@@ -1,6 +1,10 @@
 * Documentation
+	- Manual section
+	- Automated section
 * Create i3 configs
 	- Finish rice
-	- Starting text
 * Fix NetworkManager not working
-* Mount&Format script
+* Scripts
+	- Fix InitConfig
+	- Check archinstall
+	- Create easy pacman
