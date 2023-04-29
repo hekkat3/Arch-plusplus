@@ -1,0 +1,5 @@
+root:x:0:root
+adm:x:4:archiso
+wheel:x:10:archiso
+uucp:x:14:archiso
+archiso:x:1000:
